@@ -159,11 +159,12 @@ export default function RestaurantDashboard() {
                 const isOccupied = table <= 18
                 const needsService = [3, 7, 12, 15].includes(table)
                 return (
-                  <div
+                  // ...existing code...
+                <div
                     key={table}
                     className={`
                       aspect-square rounded-lg border-2 flex items-center justify-center text-sm font-medium
-                      Rp {
+                      ${ 
                         isOccupied
                           ? needsService
                             ? "bg-yellow-100 border-yellow-300 text-yellow-800"
@@ -174,6 +175,7 @@ export default function RestaurantDashboard() {
                   >
                     {table}
                   </div>
+// ...existing code...
                 )
               })}
             </div>
